@@ -1,0 +1,32 @@
+{
+  "@context": "https://w3id.org/codemeta/3.0",
+  "@type": "SoftwareSourceCode",
+  "name": "permittimelines",
+  "description": "Garage-conversion and ADU building-permit timeline data for Los Angeles, San Diego, San Francisco, and Seattle, prepared from each city's official open-data portal. 64,427 records with measured application-to-issuance waits, application-year cohort completion rates, and small-cell-suppressed timeline aggregates.",
+  "codeRepository": "https://github.com/asafichaki/permittimelines",
+  "url": "https://asafichaki.github.io/permittimelines/",
+  "issueTracker": "https://github.com/asafichaki/permittimelines/issues",
+  "license": "https://spdx.org/licenses/MIT",
+  "version": "0.1.0",
+  "datePublished": "2026-08-24",
+  "programmingLanguage": "R",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Assaf",
+      "familyName": "Ichaki",
+      "email": "assaf.ichaki@gmail.com"
+    }
+  ],
+  "keywords": [
+    "building permits",
+    "permit timeline",
+    "accessory dwelling unit",
+    "garage conversion",
+    "open government data",
+    "housing"
+  ],
+  "relatedLink": [
+    "https://www.therenology.com/tools/permit-timeline"
+  ]
+}

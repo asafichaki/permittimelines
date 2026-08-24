@@ -1,0 +1,108 @@
+{
+  "name": "permittimelines",
+  "title": "Garage-Conversion and ADU Building Permit Timelines for Four U.S. Cities",
+  "description": "One row per unique residential garage-conversion permit application in Los Angeles, San Diego, San Francisco, and Seattle, with measured application-to-issuance waits, application-year cohort completion rates, and small-cell-suppressed timeline aggregates. Prepared from each city's official open-data portal by the committed dependency-free script in data-raw/. Version 2026.1, retrieved 2026-08-24.",
+  "version": "2026.1",
+  "homepage": "https://github.com/asafichaki/permittimelines",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "City of Los Angeles Building Permits (LADBS)",
+      "path": "https://data.lacity.org/d/pi9x-tg5x"
+    },
+    {
+      "title": "City of Los Angeles Building Permit Applications (LADBS)",
+      "path": "https://data.lacity.org/d/gwh9-jnip"
+    },
+    {
+      "title": "City of San Diego Development Permits (DSD)",
+      "path": "https://data.sandiego.gov/datasets/development-permits-set1/"
+    },
+    {
+      "title": "San Francisco Building Permits (DBI)",
+      "path": "https://data.sfgov.org/d/i98e-djp9"
+    },
+    {
+      "title": "City of Seattle Building Permits (SDCI)",
+      "path": "https://data.seattle.gov/d/76t5-zqzr"
+    },
+    {
+      "title": "Prepared interactive version (Renology permit timeline explorer)",
+      "path": "https://www.therenology.com/tools/permit-timeline"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Assaf Ichaki",
+      "email": "assaf.ichaki@gmail.com",
+      "role": "author"
+    }
+  ],
+  "resources": [
+    {
+      "name": "permit-records",
+      "path": "inst/extdata/permit-records.csv.gz",
+      "format": "csv",
+      "compression": "gz",
+      "schema": {
+        "fields": [
+          {"name": "city", "type": "string", "description": "City slug: los-angeles, san-diego, san-francisco, seattle"},
+          {"name": "permit_id", "type": "string", "description": "Public permit or approval identifier"},
+          {"name": "applied_date", "type": "date", "description": "Application submission date"},
+          {"name": "issued_date", "type": "date", "description": "Permit issue date; empty if no permit had been issued at retrieval"},
+          {"name": "days_to_issue", "type": "integer", "description": "Calendar days between application and issuance"},
+          {"name": "applied_year", "type": "integer", "description": "Application year (cohort key)"},
+          {"name": "project", "type": "string", "description": "adu or habitable-room"},
+          {"name": "review_track", "type": "string", "description": "City review track or permit type"},
+          {"name": "permit_type_group", "type": "string", "description": "alteration, addition, or new-construction where mapped"},
+          {"name": "in_mature_cohort", "type": "string", "description": "yes for issued rows inside the city's aggregate window"}
+        ]
+      }
+    },
+    {
+      "name": "permit-cohorts",
+      "path": "inst/extdata/permit-cohorts.csv",
+      "format": "csv",
+      "schema": {
+        "fields": [
+          {"name": "city", "type": "string"},
+          {"name": "year", "type": "integer"},
+          {"name": "submitted", "type": "integer"},
+          {"name": "issued", "type": "integer"},
+          {"name": "resolved", "type": "number"},
+          {"name": "publishable", "type": "string"}
+        ]
+      }
+    },
+    {
+      "name": "permit-timelines",
+      "path": "inst/extdata/permit-timelines.csv",
+      "format": "csv",
+      "schema": {
+        "fields": [
+          {"name": "city", "type": "string"},
+          {"name": "dimension", "type": "string"},
+          {"name": "group", "type": "string"},
+          {"name": "n", "type": "integer"},
+          {"name": "suppressed", "type": "string"},
+          {"name": "p25", "type": "integer"},
+          {"name": "median", "type": "integer"},
+          {"name": "p75", "type": "integer"},
+          {"name": "p90", "type": "integer"},
+          {"name": "within_30", "type": "integer"},
+          {"name": "within_60", "type": "integer"},
+          {"name": "within_90", "type": "integer"},
+          {"name": "within_180", "type": "integer"},
+          {"name": "within_365", "type": "integer"},
+          {"name": "mature_years", "type": "string"}
+        ]
+      }
+    }
+  ]
+}

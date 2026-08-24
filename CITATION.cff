@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: >-
+  If you use this dataset, cite both the city agencies as the original
+  sources and this prepared version.
+title: >-
+  permittimelines: Garage-Conversion and ADU Building Permit Timeline Data
+  for Four U.S. Cities
+type: software
+version: 0.1.0
+date-released: "2026-08-24"
+license: MIT
+url: "https://asafichaki.github.io/permittimelines/"
+repository-code: "https://github.com/asafichaki/permittimelines"
+authors:
+  - family-names: Ichaki
+    given-names: Assaf
+    email: assaf.ichaki@gmail.com
+keywords:
+  - building permits
+  - permit timeline
+  - accessory dwelling unit
+  - ADU
+  - garage conversion
+  - open government data
+  - housing
+  - Los Angeles
+  - San Diego
+  - San Francisco
+  - Seattle
+  - R package
