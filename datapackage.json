@@ -1,5 +1,6 @@
 {
   "name": "permittimelines",
+  "id": "https://doi.org/10.5281/zenodo.22079794",
   "title": "Garage-Conversion and ADU Building Permit Timelines for Four U.S. Cities",
   "description": "One row per unique residential garage-conversion permit application in Los Angeles, San Diego, San Francisco, and Seattle, with measured application-to-issuance waits, application-year cohort completion rates, and small-cell-suppressed timeline aggregates. Prepared from each city's official open-data portal by the committed dependency-free script in data-raw/. Version 2026.1, retrieved 2026-08-24.",
   "version": "2026.1",

@@ -8,6 +8,7 @@ bibentry(
   ),
   author = person("Assaf", "Ichaki"),
   year = "2026",
+  doi = "10.5281/zenodo.22079794",
   url = "https://github.com/asafichaki/permittimelines",
   note = paste(
     "Version 2026.1. Prepared version published by Renology,",

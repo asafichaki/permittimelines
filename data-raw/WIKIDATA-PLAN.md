@@ -33,7 +33,7 @@ socials missing).
 | P275 (license) | Q20007257 (CC BY 4.0) |
 | P577 (publication date) | 2026-08-24 |
 | P144 (based on) | the five city portal dataset URLs (as references) |
-| P356 (DOI) | add after Zenodo mints one |
+| P356 (DOI) | 10.5281/zenodo.22079794 |
 
 Notability rests on the external, independent hosts: rOpenGov r-universe
 (merged registry), Hugging Face, and the city portals it derives from.

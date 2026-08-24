@@ -124,6 +124,7 @@ permit_metadata <- function() {
     prepared_dataset = "https://www.therenology.com/data/permit-timelines",
     interactive_explorer = "https://www.therenology.com/tools/permit-timeline",
     repository = "https://github.com/asafichaki/permittimelines",
+    doi = "10.5281/zenodo.22079794",
     license = "CC BY 4.0",
     version = "2026.1",
     retrieved = "2026-08-24",
@@ -162,7 +163,8 @@ permit_metadata <- function() {
     citation = paste(
       "Ichaki, A. (2026). Residential Garage-Conversion and ADU Permit",
       "Timelines for Los Angeles, San Diego, San Francisco, and Seattle.",
-      "Version 2026.1. Prepared version published by Renology."
+      "Version 2026.1. Prepared version published by Renology.",
+      "doi:10.5281/zenodo.22079794"
     )
   )
 }

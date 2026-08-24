@@ -81,6 +81,9 @@ public permit identifiers, dates, and categorical fields.
 
 ## Sources and citation
 
+DOI: [10.5281/zenodo.22079794](https://doi.org/10.5281/zenodo.22079794) (Zenodo, all versions)
+
+
 Original sources, all public record: [LADBS](https://data.lacity.org/d/pi9x-tg5x)
 ([applications](https://data.lacity.org/d/gwh9-jnip)),
 [San Diego DSD](https://data.sandiego.gov/datasets/development-permits-set1/),

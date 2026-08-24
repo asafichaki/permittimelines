@@ -7,6 +7,7 @@ title: >-
   for Four U.S. Cities
 type: software
 version: 0.1.1
+doi: 10.5281/zenodo.22079794
 date-released: "2026-08-24"
 license: MIT
 url: "https://asafichaki.github.io/permittimelines/"
