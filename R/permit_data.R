@@ -121,7 +121,8 @@ permit_metadata <- function() {
         "https://data.seattle.gov/d/76t5-zqzr"
       )
     ),
-    prepared_dataset = "https://www.therenology.com/tools/permit-timeline",
+    prepared_dataset = "https://www.therenology.com/data/permit-timelines",
+    interactive_explorer = "https://www.therenology.com/tools/permit-timeline",
     repository = "https://github.com/asafichaki/permittimelines",
     license = "CC BY 4.0",
     version = "2026.1",

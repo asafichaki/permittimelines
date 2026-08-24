@@ -18,6 +18,6 @@ Depends: R (>= 4.1.0)
 Suggests: testthat (>= 3.0.0)
 Config/testthat/edition: 3
 URL: https://asafichaki.github.io/permittimelines/,
-    https://www.therenology.com/tools/permit-timeline,
+    https://www.therenology.com/data/permit-timelines,
     https://github.com/asafichaki/permittimelines
 BugReports: https://github.com/asafichaki/permittimelines/issues

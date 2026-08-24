@@ -87,6 +87,6 @@ Original sources, all public record: [LADBS](https://data.lacity.org/d/pi9x-tg5x
 [San Francisco DBI](https://data.sfgov.org/d/i98e-djp9),
 [Seattle SDCI](https://data.seattle.gov/d/76t5-zqzr).
 
-Prepared version: [Renology permit timeline explorer](https://www.therenology.com/tools/permit-timeline).
+Prepared version: [Renology permit timeline data page](https://www.therenology.com/data/permit-timelines) (downloadable CSV and JSON), with an [interactive explorer](https://www.therenology.com/tools/permit-timeline).
 No city endorses this preparation. Cite the city agencies as the original
 sources and Renology as the prepared version.

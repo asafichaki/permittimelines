@@ -11,6 +11,6 @@ bibentry(
   url = "https://github.com/asafichaki/permittimelines",
   note = paste(
     "Version 2026.1. Prepared version published by Renology,",
-    "https://www.therenology.com/tools/permit-timeline"
+    "https://www.therenology.com/data/permit-timelines"
   )
 )
