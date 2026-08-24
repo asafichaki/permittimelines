@@ -1,7 +1,9 @@
 # permittimelines
 
 [Package documentation](https://asafichaki.github.io/permittimelines/) ·
-[Interactive permit timeline
+[Data page +
+downloads](https://www.therenology.com/data/permit-timelines) ·
+[Interactive
 explorer](https://www.therenology.com/tools/permit-timeline)
 
 `permittimelines` provides R access to prepared public building-permit
@@ -120,8 +122,10 @@ Original sources, all public record and updated by the cities:
 - [City of Seattle Building Permits
   (SDCI)](https://data.seattle.gov/d/76t5-zqzr)
 
-A browser-friendly interactive version of the same preparation is
-available in the [Renology permit timeline
+The same version 2026.1 files are served with visible tables on the
+[Renology permit timeline data
+page](https://www.therenology.com/data/permit-timelines), with a
+browser-friendly [interactive
 explorer](https://www.therenology.com/tools/permit-timeline). No city
 endorses this preparation.
 
