@@ -79,6 +79,11 @@ San Jose is excluded because its published dataset records no application
 date. Sacramento and Oakland publish no building-permit dataset (checked
 2026-08-16).
 
+Record coverage follows each city's published history: San Francisco from
+1980, Seattle from 2000, San Diego from 2001. Los Angeles begins in 2020 by
+design, because its application dataset starts there and earlier
+applications would appear only if eventually issued, a censored sample.
+
 ## Privacy
 
 The prepared files contain no names, addresses, coordinates, or free-text

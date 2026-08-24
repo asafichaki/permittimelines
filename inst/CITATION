@@ -6,8 +6,11 @@ bibentry(
     "Residential Garage-Conversion and ADU Permit Timelines for",
     "Los Angeles, San Diego, San Francisco, and Seattle"
   ),
-  author = c(person(family = "Renology")),
+  author = person("Assaf", "Ichaki"),
   year = "2026",
-  url = "https://www.therenology.com/tools/permit-timeline",
-  note = "Version 2026.1"
+  url = "https://github.com/asafichaki/permittimelines",
+  note = paste(
+    "Version 2026.1. Prepared version published by Renology,",
+    "https://www.therenology.com/tools/permit-timeline"
+  )
 )

@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "permittimelines"
+version = "0.1.0"
+description = "Garage-conversion and ADU building-permit timeline data for Los Angeles, San Diego, San Francisco, and Seattle, prepared from each city's official open-data portal."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Assaf Ichaki", email = "assaf.ichaki@gmail.com" }]
+keywords = [
+  "building permits", "permit timeline", "accessory dwelling unit", "ADU",
+  "garage conversion", "open government data", "housing", "dataset",
+]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Intended Audience :: Science/Research",
+  "Topic :: Sociology",
+]
+
+[project.urls]
+Homepage = "https://github.com/asafichaki/permittimelines"
+Documentation = "https://asafichaki.github.io/permittimelines/"
+"Prepared version" = "https://www.therenology.com/tools/permit-timeline"
+
+[tool.setuptools.package-data]
+permittimelines = ["data/*"]

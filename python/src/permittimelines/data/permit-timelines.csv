@@ -1,0 +1,73 @@
+city,dimension,group,n,suppressed,p25,median,p75,p90,within_30,within_60,within_90,within_180,within_365,mature_years
+los-angeles,overall,all,15689,no,69,144,272,484,9,22,33,59,84,2021;2022;2023;2024
+los-angeles,review_track,Regular Plan Check,4610,no,146,243,414,633,0,3,9,34,70,2021;2022;2023;2024
+los-angeles,review_track,Expanded Counter Plan Check,9180,no,53,112,206,369,11,29,42,70,90,2021;2022;2023;2024
+los-angeles,review_track,Plan Check at Counter,1898,no,47,106,218,399,17,32,45,70,88,2021;2022;2023;2024
+los-angeles,review_track,Appointment Plan Check,1,yes,,,,,,,,,,2021;2022;2023;2024
+los-angeles,project,adu,14868,no,70,145,272,485,9,22,32,59,84,2021;2022;2023;2024
+los-angeles,project,habitable-room,821,no,61,133,266,457,12,25,37,61,85,2021;2022;2023;2024
+los-angeles,permit_type_group,addition,6384,no,92,174,308,530,5,14,24,52,81,2021;2022;2023;2024
+los-angeles,permit_type_group,alteration,7907,no,49,108,204,381,13,31,44,71,89,2021;2022;2023;2024
+los-angeles,permit_type_group,new-construction,1070,no,176,280,460,748,0,2,4,27,63,2021;2022;2023;2024
+los-angeles,project_and_permit_type,adu|addition,6008,no,95,175,308,530,5,14,24,51,81,2021;2022;2023;2024
+los-angeles,project_and_permit_type,adu|alteration,7583,no,50,109,207,386,13,30,43,70,89,2021;2022;2023;2024
+los-angeles,project_and_permit_type,adu|new-construction,971,no,176,282,463,748,0,2,5,26,63,2021;2022;2023;2024
+los-angeles,project_and_permit_type,habitable-room|addition,376,no,70,146,295,514,6,19,34,56,82,2021;2022;2023;2024
+los-angeles,project_and_permit_type,habitable-room|new-construction,99,no,169,258,427,718,0,0,2,28,68,2021;2022;2023;2024
+los-angeles,project_and_permit_type,habitable-room|alteration,324,no,35,84,165,288,23,40,54,78,94,2021;2022;2023;2024
+seattle,overall,all,421,no,63,112,187,302,11,23,38,73,94,2022;2023;2024;2025
+seattle,review_track,Addition/Alteration,318,no,55,99,167,276,13,27,45,78,95,2022;2023;2024;2025
+seattle,review_track,New,98,no,112,170,222,373,4,9,16,57,90,2022;2023;2024;2025
+seattle,review_track,Change of Use Only - No Construction,3,yes,,,,,,,,,,2022;2023;2024;2025
+seattle,review_track,Demolition,2,yes,,,,,,,,,,2022;2023;2024;2025
+seattle,project,adu,370,no,73,119,193,313,5,18,34,71,94,2022;2023;2024;2025
+seattle,project,habitable-room,51,no,2,9,105,223,57,63,71,84,94,2022;2023;2024;2025
+seattle,permit_type_group,alteration,417,no,63,112,187,302,11,23,38,73,94,2022;2023;2024;2025
+seattle,permit_type_group,addition,4,yes,,,,,,,,,,2022;2023;2024;2025
+seattle,project_and_permit_type,adu|alteration,370,no,73,119,193,313,5,18,34,71,94,2022;2023;2024;2025
+seattle,project_and_permit_type,habitable-room|alteration,47,no,1,6,103,223,62,66,72,87,96,2022;2023;2024;2025
+seattle,project_and_permit_type,habitable-room|addition,4,yes,,,,,,,,,,2022;2023;2024;2025
+san-francisco,overall,all,541,no,14,69,219,485,35,47,55,69,86,2022;2023;2024;2025
+san-francisco,review_track,additions alterations or repairs,166,no,187,278,515,831,0,0,1,23,62,2022;2023;2024;2025
+san-francisco,review_track,otc alterations permit,373,no,7,30,75,180,51,69,79,90,97,2022;2023;2024;2025
+san-francisco,review_track,new construction wood frame,1,yes,,,,,,,,,,2022;2023;2024;2025
+san-francisco,review_track,grade or quarry or fill or excavate,1,yes,,,,,,,,,,2022;2023;2024;2025
+san-francisco,project,adu,80,no,175,265,489,694,11,13,13,29,65,2022;2023;2024;2025
+san-francisco,project,habitable-room,461,no,13,47,169,368,39,53,62,76,90,2022;2023;2024;2025
+san-diego,overall,all,3197,no,94,185,359,540,8,15,23,49,76,2018;2019;2020;2021
+san-diego,review_track,Construction Change - Building,52,no,25,71,154,233,29,40,58,83,94,2018;2019;2020;2021
+san-diego,review_track,Agreement,168,no,60,132,268,467,14,26,39,61,86,2018;2019;2020;2021
+san-diego,review_track,Encroachment Agreement,37,no,57,117,234,349,11,27,38,68,92,2018;2019;2020;2021
+san-diego,review_track,Combination Building Permit,2302,no,103,179,339,510,7,13,21,50,77,2018;2019;2020;2021
+san-diego,review_track,Coastal Development Permit,83,no,267,449,696,903,1,1,5,10,40,2018;2019;2020;2021
+san-diego,review_track,Storm Water Maintenance Agrmnt,12,yes,,,,,,,,,,2018;2019;2020;2021
+san-diego,review_track,Site Development Permit,15,yes,,,,,,,,,,2018;2019;2020;2021
+san-diego,review_track,Construction Change - Fire,3,yes,,,,,,,,,,2018;2019;2020;2021
+san-diego,review_track,Tentative Map,3,yes,,,,,,,,,,2018;2019;2020;2021
+san-diego,review_track,"Master Plan, Establish",9,yes,,,,,,,,,,2018;2019;2020;2021
+san-diego,review_track,Mechanical Permit,62,no,170,302,446,693,0,3,6,26,61,2018;2019;2020;2021
+san-diego,review_track,Electrical Permit,63,no,163,293,446,693,5,8,8,27,62,2018;2019;2020;2021
+san-diego,review_track,Building Permit,80,no,216,325,476,669,1,4,4,19,56,2018;2019;2020;2021
+san-diego,review_track,Easement Vacation,2,yes,,,,,,,,,,2018;2019;2020;2021
+san-diego,review_track,Plumbing Permit ,61,no,187,302,446,693,0,2,5,25,61,2018;2019;2020;2021
+san-diego,review_track,Notice of Termination,3,yes,,,,,,,,,,2018;2019;2020;2021
+san-diego,review_track,Electrical-Photovoltaic,56,no,55,55,110,110,5,57,57,95,95,2018;2019;2020;2021
+san-diego,review_track,Demolition Permit,81,no,0,15,84,194,56,67,77,89,99,2018;2019;2020;2021
+san-diego,review_track,Neighborhood Developmnt Permit,5,yes,,,,,,,,,,2018;2019;2020;2021
+san-diego,review_track,Deferred Fire Approval,2,yes,,,,,,,,,,2018;2019;2020;2021
+san-diego,review_track,Substantial Conformance Review,1,yes,,,,,,,,,,2018;2019;2020;2021
+san-diego,review_track,Approval - Construction - Demolition Pmt,12,yes,,,,,,,,,,2018;2019;2020;2021
+san-diego,review_track,Approval - Process - Agreement,10,yes,,,,,,,,,,2018;2019;2020;2021
+san-diego,review_track,Approval - Construction - Master Plan Establish,4,yes,,,,,,,,,,2018;2019;2020;2021
+san-diego,review_track,Electrical Pmt,18,yes,,,,,,,,,,2018;2019;2020;2021
+san-diego,review_track,Mechanical Pmt,18,yes,,,,,,,,,,2018;2019;2020;2021
+san-diego,review_track,Plumbing Pmt,17,yes,,,,,,,,,,2018;2019;2020;2021
+san-diego,review_track,No-Plan - Nonresidential/Multifamily - Electrical,1,yes,,,,,,,,,,2018;2019;2020;2021
+san-diego,review_track,No-Plan - Residential - Combination Mech/Elec/Plum,2,yes,,,,,,,,,,2018;2019;2020;2021
+san-diego,review_track,Fire Permit - Suppression,14,yes,,,,,,,,,,2018;2019;2020;2021
+san-diego,review_track,No-Plan - Nonresidential/Multifamily - Plumbing,1,yes,,,,,,,,,,2018;2019;2020;2021
+san-diego,project,habitable-room,2375,no,83,152,347,537,11,20,28,55,76,2018;2019;2020;2021
+san-diego,project,adu,822,no,155,247,378,601,1,3,8,32,74,2018;2019;2020;2021
+san-diego,permit_type_group,alteration,300,no,195,274,411,583,1,1,1,19,69,2018;2019;2020;2021
+san-diego,project_and_permit_type,adu|alteration,237,no,199,278,410,554,0,0,0,17,69,2018;2019;2020;2021
+san-diego,project_and_permit_type,habitable-room|alteration,63,no,183,261,545,722,3,5,5,24,70,2018;2019;2020;2021
