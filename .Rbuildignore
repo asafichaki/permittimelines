@@ -1,0 +1,7 @@
+^\.github$
+^\.gitignore$
+^LICENSE\.md$
+^README\.md$
+^_pkgdown\.yml$
+^data-raw$
+^docs$

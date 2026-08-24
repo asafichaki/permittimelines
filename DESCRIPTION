@@ -1,0 +1,23 @@
+Package: permittimelines
+Type: Package
+Title: Garage-Conversion and ADU Building Permit Timeline Data for Four
+    U.S. Cities
+Version: 0.1.0
+Authors@R: person("Assaf", "Ichaki", email = "assaf.ichaki@gmail.com", role = c("aut", "cre"))
+Description: Provides reproducible access to prepared public building-permit
+    records measuring how long residential garage-to-accessory-dwelling-unit
+    (ADU) and garage-to-habitable-room conversion permits waited between
+    application and issuance in Los Angeles, San Diego, San Francisco, and
+    Seattle. Includes one row per unique application with the measured wait,
+    application-year cohort completion rates, and small-cell-suppressed
+    timeline aggregates, prepared from each city's official open-data portal
+    with a committed, dependency-free build script.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 4.1.0)
+Suggests: testthat (>= 3.0.0)
+Config/testthat/edition: 3
+URL: https://asafichaki.github.io/permittimelines/,
+    https://www.therenology.com/tools/permit-timeline,
+    https://github.com/asafichaki/permittimelines
+BugReports: https://github.com/asafichaki/permittimelines/issues

@@ -1,0 +1,27 @@
+url: https://asafichaki.github.io/permittimelines/
+
+template:
+  bootstrap: 5
+
+home:
+  title: Garage-conversion and ADU permit timeline data for R
+  description: >
+    Reproducible access to prepared building-permit records measuring how
+    long residential garage-to-ADU conversions waited between application
+    and issuance in Los Angeles, San Diego, San Francisco, and Seattle.
+
+reference:
+  - title: Package
+    contents:
+      - permittimelines-package
+  - title: Datasets
+    contents:
+      - permit_records
+      - permit_cohorts
+      - permit_timelines
+      - permit_metadata
+
+footer:
+  structure:
+    left: developed_by
+    right: built_with

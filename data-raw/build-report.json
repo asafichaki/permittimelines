@@ -1,0 +1,74 @@
+{
+  "generatedAt": "2026-08-24T08:19:19.903Z",
+  "cities": {
+    "los-angeles": {
+      "label": "Los Angeles",
+      "source": {
+        "name": "City of Los Angeles Building Permits (LADBS)",
+        "issuedDataset": "https://data.lacity.org/d/pi9x-tg5x",
+        "submittedDataset": "https://data.lacity.org/d/gwh9-jnip"
+      },
+      "rawRows": 112568,
+      "records": 31150,
+      "matureYears": [
+        2021,
+        2022,
+        2023,
+        2024
+      ]
+    },
+    "seattle": {
+      "label": "Seattle",
+      "source": {
+        "name": "City of Seattle Building Permits (SDCI)",
+        "issuedDataset": "https://data.seattle.gov/d/76t5-zqzr",
+        "submittedDataset": "https://data.seattle.gov/d/76t5-zqzr"
+      },
+      "rawRows": 16129,
+      "records": 2118,
+      "matureYears": [
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "san-francisco": {
+      "label": "San Francisco",
+      "source": {
+        "name": "San Francisco Building Permits (DBI)",
+        "issuedDataset": "https://data.sfgov.org/d/i98e-djp9",
+        "submittedDataset": "https://data.sfgov.org/d/i98e-djp9"
+      },
+      "rawRows": 39826,
+      "records": 4886,
+      "matureYears": [
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "san-diego": {
+      "label": "San Diego",
+      "source": {
+        "name": "City of San Diego Development Permits (DSD)",
+        "issuedDataset": "https://data.sandiego.gov/datasets/development-permits-set1/",
+        "submittedDataset": "https://data.sandiego.gov/datasets/development-permits-set1/"
+      },
+      "rawRows": 57684,
+      "records": 26273,
+      "matureYears": [
+        2018,
+        2019,
+        2020,
+        2021
+      ]
+    }
+  },
+  "totals": {
+    "records": 64427,
+    "cohorts": 43,
+    "timelineCells": 72
+  }
+}

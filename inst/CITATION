@@ -1,0 +1,13 @@
+citHeader("To cite the prepared permit timeline data in publications, use:")
+
+bibentry(
+  bibtype = "Misc",
+  title = paste(
+    "Residential Garage-Conversion and ADU Permit Timelines for",
+    "Los Angeles, San Diego, San Francisco, and Seattle"
+  ),
+  author = c(person(family = "Renology")),
+  year = "2026",
+  url = "https://www.therenology.com/tools/permit-timeline",
+  note = "Version 2026.1"
+)
