@@ -39,7 +39,12 @@
     "url": "https://www.therenology.com/"
   },
   "keywords": ["building permits", "permit timeline", "accessory dwelling unit", "ADU", "garage conversion", "open government data", "housing"],
-  "spatialCoverage": ["Los Angeles, CA", "San Diego, CA", "San Francisco, CA", "Seattle, WA"],
+  "spatialCoverage": [
+    {"@type": "Place", "name": "Los Angeles, California"},
+    {"@type": "Place", "name": "San Diego, California"},
+    {"@type": "Place", "name": "San Francisco, California"},
+    {"@type": "Place", "name": "Seattle, Washington"}
+  ],
   "temporalCoverage": "1980-06-09/2026-08-21",
   "isBasedOn": [
     "https://data.lacity.org/d/pi9x-tg5x",
@@ -152,6 +157,7 @@
 <li>
 <strong>Only cohorts with roughly 75% of applications resolved enter the aggregates.</strong> Recent years are censored toward fast permits; their row-level records are still included, flagged <code>in_mature_cohort = FALSE</code>.</li>
 </ol>
+<p>Percentile columns are lower-tail order statistics of the sorted waits (quantile type 1, no interpolation), matching the published interactive explorer; for even-sized groups the median is the upper of the two central observations. The cohort table covers city-years from 2015 onward with at least 30 cleaned applications; earlier or thinner city-years appear only in the record-level file.</p>
 </div>
 <div class="section level2">
 <h2 id="interpretation-caveats">Interpretation caveats<a class="anchor" aria-label="anchor" href="#interpretation-caveats"></a>

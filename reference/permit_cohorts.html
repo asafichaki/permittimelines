@@ -31,7 +31,12 @@ so issue-year grouping oversamples slow permits."><script type="application/ld+j
     "url": "https://www.therenology.com/"
   },
   "keywords": ["building permits", "permit timeline", "accessory dwelling unit", "ADU", "garage conversion", "open government data", "housing"],
-  "spatialCoverage": ["Los Angeles, CA", "San Diego, CA", "San Francisco, CA", "Seattle, WA"],
+  "spatialCoverage": [
+    {"@type": "Place", "name": "Los Angeles, California"},
+    {"@type": "Place", "name": "San Diego, California"},
+    {"@type": "Place", "name": "San Francisco, California"},
+    {"@type": "Place", "name": "Seattle, Washington"}
+  ],
   "temporalCoverage": "1980-06-09/2026-08-21",
   "isBasedOn": [
     "https://data.lacity.org/d/pi9x-tg5x",
@@ -117,10 +122,12 @@ so issue-year grouping oversamples slow permits.</p>
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>A data frame with one row per city and application year. <code>publishable</code>
-is <code>TRUE</code> once a cohort has at least 30 applications and at least 75
-percent of them resolved; younger cohorts are censored toward fast permits
-and must not be aggregated.</p>
+    <p>A data frame with one row per city and application year from 2015 onward
+with at least 30 cleaned applications; earlier or thinner city-years are
+present in <code><a href="permit_records.html">permit_records</a></code> but carry no cohort row.
+<code>publishable</code> is <code>TRUE</code> once a cohort has at least 30 applications
+and at least 75 percent of them resolved; younger cohorts are censored
+toward fast permits and must not be aggregated.</p>
     </div>
 
     <div class="section level2">

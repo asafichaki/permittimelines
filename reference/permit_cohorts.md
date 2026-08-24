@@ -21,10 +21,13 @@ permit_cohorts(city = NULL)
 
 ## Value
 
-A data frame with one row per city and application year. `publishable`
-is `TRUE` once a cohort has at least 30 applications and at least 75
-percent of them resolved; younger cohorts are censored toward fast
-permits and must not be aggregated.
+A data frame with one row per city and application year from 2015 onward
+with at least 30 cleaned applications; earlier or thinner city-years are
+present in
+[`permit_records`](https://asafichaki.github.io/permittimelines/reference/permit_records.md)
+but carry no cohort row. `publishable` is `TRUE` once a cohort has at
+least 30 applications and at least 75 percent of them resolved; younger
+cohorts are censored toward fast permits and must not be aggregated.
 
 ## Examples
 

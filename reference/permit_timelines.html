@@ -3,14 +3,20 @@
 the city's mature cohort window (its last four publishable application-year
 cohorts, listed in mature_years). Cells with fewer than 30 records are
 suppressed: suppressed is TRUE and every statistic is
-NA.
+NA. Percentile columns are lower-tail order statistics of the sorted
+waits (quantile type 1, no interpolation), matching the published interactive
+explorer; for even-sized groups the median is the upper of the two central
+observations.
 Aggregates are reported separately per review track, project type, and permit
 type group. Never pool review tracks into one median: both tracks of a city
 can get faster while the pooled median rises, purely from a mix shift."><meta property="og:description" content="Loads percentile waits and within-N-days shares for each city, computed over
 the city's mature cohort window (its last four publishable application-year
 cohorts, listed in mature_years). Cells with fewer than 30 records are
 suppressed: suppressed is TRUE and every statistic is
-NA.
+NA. Percentile columns are lower-tail order statistics of the sorted
+waits (quantile type 1, no interpolation), matching the published interactive
+explorer; for even-sized groups the median is the upper of the two central
+observations.
 Aggregates are reported separately per review track, project type, and permit
 type group. Never pool review tracks into one median: both tracks of a city
 can get faster while the pooled median rises, purely from a mix shift."><script type="application/ld+json">
@@ -37,7 +43,12 @@ can get faster while the pooled median rises, purely from a mix shift."><script 
     "url": "https://www.therenology.com/"
   },
   "keywords": ["building permits", "permit timeline", "accessory dwelling unit", "ADU", "garage conversion", "open government data", "housing"],
-  "spatialCoverage": ["Los Angeles, CA", "San Diego, CA", "San Francisco, CA", "Seattle, WA"],
+  "spatialCoverage": [
+    {"@type": "Place", "name": "Los Angeles, California"},
+    {"@type": "Place", "name": "San Diego, California"},
+    {"@type": "Place", "name": "San Francisco, California"},
+    {"@type": "Place", "name": "Seattle, Washington"}
+  ],
   "temporalCoverage": "1980-06-09/2026-08-21",
   "isBasedOn": [
     "https://data.lacity.org/d/pi9x-tg5x",
@@ -105,7 +116,10 @@ can get faster while the pooled median rises, purely from a mix shift."><script 
 the city's mature cohort window (its last four publishable application-year
 cohorts, listed in <code>mature_years</code>). Cells with fewer than 30 records are
 suppressed: <code>suppressed</code> is <code>TRUE</code> and every statistic is
-<code>NA</code>.</p>
+<code>NA</code>. Percentile columns are lower-tail order statistics of the sorted
+waits (quantile type 1, no interpolation), matching the published interactive
+explorer; for even-sized groups the median is the upper of the two central
+observations.</p>
 <p>Aggregates are reported separately per review track, project type, and permit
 type group. Never pool review tracks into one median: both tracks of a city
 can get faster while the pooled median rises, purely from a mix shift.</p>
