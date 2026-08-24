@@ -7,11 +7,12 @@
 ## Citation
 
 Source:
-[`inst/CITATION`](https://github.com/asafichaki/permittimelines/blob/v0.1.1/inst/CITATION)
+[`inst/CITATION`](https://github.com/asafichaki/permittimelines/blob/main/inst/CITATION)
 
 Ichaki A (2026). “Residential Garage-Conversion and ADU Permit Timelines
-for Los Angeles, San Diego, San Francisco, and Seattle.” Version 2026.1.
-Prepared version published by Renology,
+for Los Angeles, San Diego, San Francisco, and Seattle.”
+[doi:10.5281/zenodo.22079794](https://doi.org/10.5281/zenodo.22079794).
+Version 2026.1. Prepared version published by Renology,
 https://www.therenology.com/data/permit-timelines,
 <https://github.com/asafichaki/permittimelines>.
 
@@ -19,6 +20,7 @@ https://www.therenology.com/data/permit-timelines,
       title = {Residential Garage-Conversion and ADU Permit Timelines for Los Angeles, San Diego, San Francisco, and Seattle},
       author = {Assaf Ichaki},
       year = {2026},
+      doi = {10.5281/zenodo.22079794},
       url = {https://github.com/asafichaki/permittimelines},
       note = {Version 2026.1. Prepared version published by Renology, https://www.therenology.com/data/permit-timelines},
     }

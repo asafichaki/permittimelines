@@ -1,5 +1,7 @@
 # permittimelines
 
+[![DOI](https://zenodo.org/badge/1344712852.svg)](https://doi.org/10.5281/zenodo.22079794)
+
 [Package documentation](https://asafichaki.github.io/permittimelines/) ·
 [Data page +
 downloads](https://www.therenology.com/data/permit-timelines) ·
@@ -131,4 +133,6 @@ endorses this preparation.
 
 The package code is MIT licensed. The prepared data are available under
 CC BY 4.0; cite the city agencies as the original sources and Renology
-as the prepared version. See `citation("permittimelines")`.
+as the prepared version, DOI
+[10.5281/zenodo.22079794](https://doi.org/10.5281/zenodo.22079794). See
+`citation("permittimelines")`.
