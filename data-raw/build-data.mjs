@@ -40,7 +40,7 @@
  *   censored toward fast permits and are excluded from aggregates (their
  *   row-level records are still included, flagged in_mature_cohort = "no").
  */
-import { writeFileSync, mkdirSync } from 'node:fs'
+import { writeFileSync, mkdirSync, copyFileSync } from 'node:fs'
 import { gzipSync } from 'node:zlib'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -176,7 +176,9 @@ async function fetchCsvCity(city) {
     const res = await fetch(url, {
       headers: { 'User-Agent': 'Mozilla/5.0 (Macintosh) AppleWebKit/537.36 Chrome/126 Safari/537.36' },
     })
-    if (!res.ok) { console.error(`  ${url.split('/').pop()} -> ${res.status}, skipped`); continue }
+    // Fail closed: a missing or rate-limited file must abort the build, or a
+    // transient failure would silently produce a valid-looking partial release.
+    if (!res.ok) throw new Error(`${url} returned ${res.status}`)
     let text = await res.text()
     let kept = 0
     eachCsvRow(text, (row, header) => {
@@ -213,6 +215,10 @@ function isoDate(value) {
   return Number.isFinite(d.getTime()) ? d.toISOString().slice(0, 10) : null
 }
 
+// Percentiles are lower-tail order statistics of the sorted waits (quantile
+// type 1, no interpolation), matching the published interactive explorer.
+// For even-sized groups the "median" is therefore the upper of the two
+// central observations, never an interpolated half-day value.
 function summarise(values) {
   if (values.length < MIN_N) return { n: values.length, suppressed: true }
   const v = [...values].sort((a, b) => a - b)
@@ -300,26 +306,44 @@ async function buildCity(city) {
     pool = await fetchAll(city.submitted, whereSubmitted, select)
     rawCount = pool.length
     if (city.submitted !== city.issued) {
-      // Los Angeles: the submitted dataset is the application universe, but the
-      // issued dataset is authoritative for issue dates and review tracks, so
-      // issued rows replace their submitted counterparts.
+      // Los Angeles: the submitted dataset is the application universe, and the
+      // issued dataset enriches issue dates and review tracks for those same
+      // applications. Issued rows whose ID is absent from the application
+      // universe are EXCLUDED: adding them would reintroduce the survivorship
+      // bias the floorYear rule exists to prevent.
       const issuedRows = await fetchAll(city.issued, `upper(${f.desc}) like '%GARAGE%' AND ${f.applied} IS NOT NULL AND ${f.issued} IS NOT NULL`, select)
       rawCount += issuedRows.length
-      const byId = new Map()
-      for (const row of pool) if (row[f.id]) byId.set(row[f.id], row)
-      for (const row of issuedRows) if (row[f.id]) byId.set(row[f.id], row)
-      pool = [...byId.values()]
+      const submittedIds = new Set(pool.map((r) => r[f.id]).filter(Boolean))
+      const usable = issuedRows.filter((r) => submittedIds.has(r[f.id]))
+      console.error(`  ${city.label}: ${issuedRows.length - usable.length} issued-only rows excluded (not in the application universe)`)
+      pool = pool.concat(usable)
     }
   }
 
-  const seen = new Set()
-  const records = []
+  // Deduplicate on the permit number with a deterministic choice among the
+  // rows sharing an ID, independent of fetch order (Socrata pagination has no
+  // stable order): classify every row first, then prefer a resolved record,
+  // then the earliest application date, then lexicographic tiebreaks.
+  const byId = new Map()
   for (const row of pool) {
     const id = row[f.id]
-    if (!id || seen.has(id)) continue
-    seen.add(id)
-    const record = toRecord(city, row, classify)
-    if (record) records.push(record)
+    if (!id) continue
+    const list = byId.get(id)
+    if (list) list.push(row)
+    else byId.set(id, [row])
+  }
+  const records = []
+  for (const rows of byId.values()) {
+    const candidates = rows.map((row) => toRecord(city, row, classify)).filter(Boolean)
+    if (!candidates.length) continue
+    candidates.sort((a, b) =>
+      (b.issued_date ? 1 : 0) - (a.issued_date ? 1 : 0) ||
+      a.applied_date.localeCompare(b.applied_date) ||
+      String(a.issued_date || '').localeCompare(String(b.issued_date || '')) ||
+      String(a.review_track || '').localeCompare(String(b.review_track || '')) ||
+      String(a.permit_type_group || '').localeCompare(String(b.permit_type_group || ''))
+    )
+    records.push(candidates[0])
   }
 
   const completion = {}
@@ -435,6 +459,15 @@ async function main() {
   report.totals = { records: allRecords.length, cohorts: allCohorts.length, timelineCells: allTimelines.length }
   writeFileSync(REPORT, `${JSON.stringify(report, null, 2)}\n`)
   console.log(`wrote ${REPORT}`)
+
+  // Keep the Python package's bundled copies in lockstep so a rebuild can
+  // never leave PyPI serving stale data while R serves the new release.
+  const pyDir = resolve(HERE, '../python/src/permittimelines/data')
+  mkdirSync(pyDir, { recursive: true })
+  for (const name of ['permit-records.csv.gz', 'permit-cohorts.csv', 'permit-timelines.csv']) {
+    copyFileSync(resolve(OUT_DIR, name), resolve(pyDir, name))
+  }
+  console.log(`synced ${pyDir}`)
 }
 
 main().catch((err) => {

@@ -18,7 +18,10 @@ Loads percentile waits and within-N-days shares for each city, computed over
 the city's mature cohort window (its last four publishable application-year
 cohorts, listed in \code{mature_years}). Cells with fewer than 30 records are
 suppressed: \code{suppressed} is \code{TRUE} and every statistic is
-\code{NA}.
+\code{NA}. Percentile columns are lower-tail order statistics of the sorted
+waits (quantile type 1, no interpolation), matching the published interactive
+explorer; for even-sized groups the median is the upper of the two central
+observations.
 
 Aggregates are reported separately per review track, project type, and permit
 type group. Never pool review tracks into one median: both tracks of a city

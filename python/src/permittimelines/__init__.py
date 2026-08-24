@@ -95,9 +95,41 @@ def metadata() -> dict:
         "license": "CC BY 4.0",
         "version": "2026.1",
         "retrieved": "2026-08-24",
+        "method": {
+            "min_cell_size": 30,
+            "resolved_floor": 0.75,
+            "cohort_rule": "Cohorts are formed on the application year, never the issue year.",
+            "track_rule": "Review tracks are never pooled into one median.",
+            "percentile_rule": (
+                "Percentiles are lower-tail order statistics (quantile type 1, "
+                "no interpolation), matching the published interactive explorer."
+            ),
+            "clock_excludes": (
+                "Design, plan preparation, any planning review before the "
+                "application is submitted, and everything after the permit is issued."
+            ),
+        },
+        "caveats": [
+            (
+                "The measured wait is the homeowner's calendar wait, not a "
+                "statutory compliance measure. California Government Code 66317 "
+                "runs its 60-day clock from a completed application and tolls on "
+                "applicant delay; these records carry only the submission date."
+            ),
+            (
+                "An application with an empty issued_date had no issued permit "
+                "when the records were retrieved. That may be a stalled review or "
+                "an abandoned project; the records do not distinguish the two, "
+                "and none of them are marked denied."
+            ),
+            (
+                "Cross-city level comparison is not apples-to-apples; the trend "
+                "within a city is sound."
+            ),
+        ],
         "citation": (
-            "Renology (2026). Residential Garage-Conversion and ADU Permit "
+            "Ichaki, A. (2026). Residential Garage-Conversion and ADU Permit "
             "Timelines for Los Angeles, San Diego, San Francisco, and "
-            "Seattle. Version 2026.1."
+            "Seattle. Version 2026.1. Prepared version published by Renology."
         ),
     }

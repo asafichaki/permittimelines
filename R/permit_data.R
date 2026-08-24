@@ -36,10 +36,12 @@ permit_records <- function(city = NULL) {
 #' filed earlier, so issue-year grouping oversamples slow permits.
 #'
 #' @param city Optional city slug filter, as in \code{\link{permit_records}}.
-#' @return A data frame with one row per city and application year.
-#'   \code{publishable} is \code{TRUE} once a cohort has at least 30
-#'   applications and at least 75 percent of them resolved; younger cohorts
-#'   are censored toward fast permits and must not be aggregated.
+#' @return A data frame with one row per city and application year from 2015
+#'   onward with at least 30 cleaned applications; earlier or thinner
+#'   city-years are present in \code{\link{permit_records}} but carry no
+#'   cohort row. \code{publishable} is \code{TRUE} once a cohort has at least
+#'   30 applications and at least 75 percent of them resolved; younger
+#'   cohorts are censored toward fast permits and must not be aggregated.
 #' @export
 #' @examples
 #' cohorts <- permit_cohorts("los-angeles")
@@ -60,7 +62,10 @@ permit_cohorts <- function(city = NULL) {
 #' over the city's mature cohort window (its last four publishable
 #' application-year cohorts, listed in \code{mature_years}). Cells with fewer
 #' than 30 records are suppressed: \code{suppressed} is \code{TRUE} and every
-#' statistic is \code{NA}.
+#' statistic is \code{NA}. Percentile columns are lower-tail order statistics
+#' of the sorted waits (quantile type 1, no interpolation), matching the
+#' published interactive explorer; for even-sized groups the median is the
+#' upper of the two central observations.
 #'
 #' Aggregates are reported separately per review track, project type, and
 #' permit type group. Never pool review tracks into one median: both tracks
@@ -126,6 +131,10 @@ permit_metadata <- function() {
       resolved_floor = 0.75,
       cohort_rule = "Cohorts are formed on the application year, never the issue year.",
       track_rule = "Review tracks are never pooled into one median.",
+      percentile_rule = paste(
+        "Percentiles are lower-tail order statistics (quantile type 1,",
+        "no interpolation), matching the published interactive explorer."
+      ),
       clock_excludes = paste(
         "Design, plan preparation, any planning review before the",
         "application is submitted, and everything after the permit is issued."
@@ -150,9 +159,9 @@ permit_metadata <- function() {
       )
     ),
     citation = paste(
-      "Renology (2026). Residential Garage-Conversion and ADU Permit",
+      "Ichaki, A. (2026). Residential Garage-Conversion and ADU Permit",
       "Timelines for Los Angeles, San Diego, San Francisco, and Seattle.",
-      "Version 2026.1."
+      "Version 2026.1. Prepared version published by Renology."
     )
   )
 }

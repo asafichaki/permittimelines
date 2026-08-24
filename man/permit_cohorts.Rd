@@ -8,10 +8,12 @@ permit_cohorts(city = NULL)
 \item{city}{Optional city slug filter, as in \code{\link{permit_records}}.}
 }
 \value{
-A data frame with one row per city and application year. \code{publishable}
-is \code{TRUE} once a cohort has at least 30 applications and at least 75
-percent of them resolved; younger cohorts are censored toward fast permits
-and must not be aggregated.
+A data frame with one row per city and application year from 2015 onward
+with at least 30 cleaned applications; earlier or thinner city-years are
+present in \code{\link{permit_records}} but carry no cohort row.
+\code{publishable} is \code{TRUE} once a cohort has at least 30 applications
+and at least 75 percent of them resolved; younger cohorts are censored
+toward fast permits and must not be aggregated.
 }
 \description{
 Loads, for each city and application year, how many cleaned applications were

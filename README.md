@@ -61,6 +61,13 @@ The preparation follows five rules, each validated against the live data:
    aggregates.** Recent years are censored toward fast permits; their
    row-level records are still included, flagged `in_mature_cohort = FALSE`.
 
+Percentile columns are lower-tail order statistics of the sorted waits
+(quantile type 1, no interpolation), matching the published interactive
+explorer; for even-sized groups the median is the upper of the two central
+observations. The cohort table covers city-years from 2015 onward with at
+least 30 cleaned applications; earlier or thinner city-years appear only in
+the record-level file.
+
 ## Interpretation caveats
 
 - The measured wait is the homeowner's calendar wait between submitting an
