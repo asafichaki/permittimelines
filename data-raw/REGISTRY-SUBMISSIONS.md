@@ -1,7 +1,10 @@
-# Registry submission drafts — NOT YET SUBMITTED
+# Registry submissions — SUBMITTED 2026-08-24 (approved by Assaf)
 
-Prepared 2026-08-24. Each of these mirrors a merged californiaalw submission.
-Submit only after Assaf approves. Fork each upstream repo, branch, apply, PR.
+Each mirrors a merged californiaalw submission. Open PRs:
+
+- rOpenGov r-universe: https://github.com/rOpenGov/ropengov.r-universe.dev/pull/8
+- r-multiverse: https://github.com/r-multiverse/contributions/pull/275
+- rweekly: https://github.com/rweekly/rweekly.org/pull/2092
 
 ## 1. rOpenGov r-universe (the one that merged for californiaalw as PR #7)
 
