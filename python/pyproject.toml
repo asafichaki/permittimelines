@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "permittimelines"
-version = "0.1.0"
+version = "0.1.1"
 description = "Garage-conversion and ADU building-permit timeline data for Los Angeles, San Diego, San Francisco, and Seattle, prepared from each city's official open-data portal."
 readme = "README.md"
 requires-python = ">=3.9"

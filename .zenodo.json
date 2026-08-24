@@ -1,0 +1,58 @@
+{
+  "title": "permittimelines: Garage-Conversion and ADU Building Permit Timeline Data for Four U.S. Cities",
+  "description": "<p>64,427 residential garage-to-ADU and garage-to-habitable-room conversion permit applications for Los Angeles, San Diego, San Francisco, and Seattle, with measured application-to-issuance waits, application-year cohort completion rates, and small-cell-suppressed timeline aggregates. Prepared from each city's official open-data portal with a committed, dependency-free build script. Distributed as an R package with Python loaders; the prepared data files are CC BY 4.0 and the code is MIT.</p><p>Method rules: cohorts are formed on the application year, never the issue year; records are deduplicated on the permit number; review tracks are never pooled; aggregate cells under 30 records are suppressed; only city-years with roughly 75 percent of applications resolved enter the aggregates. The measured wait is the homeowner's calendar wait, not a statutory compliance measure.</p>",
+  "creators": [
+    {
+      "name": "Ichaki, Assaf"
+    }
+  ],
+  "license": "MIT",
+  "upload_type": "dataset",
+  "access_right": "open",
+  "keywords": [
+    "building permits",
+    "permit timeline",
+    "accessory dwelling unit",
+    "ADU",
+    "garage conversion",
+    "open government data",
+    "housing",
+    "Los Angeles",
+    "San Diego",
+    "San Francisco",
+    "Seattle",
+    "R package"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://www.therenology.com/data/permit-timelines",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://huggingface.co/datasets/RENOLOGY/permittimelines",
+      "relation": "isIdenticalTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://data.lacity.org/d/pi9x-tg5x",
+      "relation": "isDerivedFrom",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://data.sandiego.gov/datasets/development-permits-set1/",
+      "relation": "isDerivedFrom",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://data.sfgov.org/d/i98e-djp9",
+      "relation": "isDerivedFrom",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://data.seattle.gov/d/76t5-zqzr",
+      "relation": "isDerivedFrom",
+      "scheme": "url"
+    }
+  ]
+}

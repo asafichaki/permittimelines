@@ -2,7 +2,7 @@ Package: permittimelines
 Type: Package
 Title: Garage-Conversion and ADU Building Permit Timeline Data for Four
     U.S. Cities
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: person("Assaf", "Ichaki", email = "assaf.ichaki@gmail.com", role = c("aut", "cre"))
 Description: Provides reproducible access to prepared public building-permit
     records measuring how long residential garage-to-accessory-dwelling-unit
